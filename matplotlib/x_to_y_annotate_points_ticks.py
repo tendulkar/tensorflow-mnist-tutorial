@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+import common.ticks as ticks
 
 X = np.linspace(-np.pi, np.pi, num=256, endpoint=True)
 C, S = np.cos(X), np.sin(X)
@@ -50,5 +50,7 @@ plt.scatter([t,], [np.cos(t), ], 40, color="yellow")
 plt.annotate(r'$\cos(\frac{2\pi}{3})=-\frac{1}{2}$', xy=(t, np.cos(t)),
              xytext=(-90, -50), xycoords="data", textcoords="offset points",
              arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=.2"))
+# now annotate ticks, increase font size to 16
+ticks.scale_ticks(plt, 16)
 
 plt.show()
