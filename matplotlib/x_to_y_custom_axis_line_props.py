@@ -22,4 +22,5 @@ plt.ylim(-1.1, 1.1)
 plt.yticks([-1, 0, 1], [r'$-1$', r'$0$', r'$+1$'])
 
 plt.legend(loc="upper left", frameon=False)
+
 plt.show()
