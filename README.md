@@ -1,6 +1,19 @@
+## Modules
+### tutorial
+learn from http://tensorflow.org and other resources
+### yugandhar
+for all code in parent repository and learning and adding code to it, it includes
+1. one layer neural net
+2. five layer neural net
+3. drop out for regularization
+4. relu/sigmoid for activation in classification functions
+5. using exponential decay for learning parameter (hyper param)
+### matlibplot
+learning matlib plot for python
+
 ![Image](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/img/93d5f08a4f82d4c.png)
 
-This is support code for the codelab "[Tensorflow and deep learning - without a PhD](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist)"
+Adding my code on top of "[Tensorflow and deep learning - without a PhD](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist)"
 
 The presentation explaining the underlying concepts is [here](https://goo.gl/pHeXe7) and you will find codelab instructions to follow on its last slide. Do not forget to open the speaker notes in the presentation, a lot of the explanations are there.
 
