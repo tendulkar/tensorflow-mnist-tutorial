@@ -36,6 +36,8 @@ drop out using pkeep
 ## matplotlib ##
 learning matlab plot for python
 
+
+## Parent repository readme ##
 ![Image](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/img/93d5f08a4f82d4c.png)
 
 Adding my code on top of "[Tensorflow and deep learning - without a PhD](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist)"
