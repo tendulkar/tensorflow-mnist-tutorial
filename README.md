@@ -1,15 +1,40 @@
-## Modules
-### tutorial
+## Modules ##
+
+### tutorial ###
 learn from http://tensorflow.org and other resources
-### yugandhar
+
+### yugandhar ###
 for all code in parent repository and learning and adding code to it, it includes
-1. one layer neural net
-2. five layer neural net
-3. drop out for regularization
-4. relu/sigmoid for activation in classification functions
-5. using exponential decay for learning parameter (hyper param)
-### matlibplot
-learning matlib plot for python
+neural nets for classification
+
+#### learn complexity (non linear) ####
+add more layers
+
+#### Regularization ####
+drop out using pkeep
+
+#### Activation ####
+* relu
+* softmax
+* sigmoid
+
+#### updater ####
+* gradient descent
+* adam
+* adaptive learning
+
+#### loss function ####
+* average of squared error
+* cross entropy
+* KL divergence
+* batch norm
+
+#### Keeping locality/shape info ####
+* convolutional
+
+
+### matplotlib ###
+learning matlab plot for python
 
 ![Image](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/img/93d5f08a4f82d4c.png)
 
