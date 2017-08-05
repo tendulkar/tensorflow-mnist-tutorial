@@ -1,9 +1,9 @@
-## Modules ##
+# Modules #
 
-### tutorial ###
+## tutorial ##
 learn from http://tensorflow.org and other resources
 
-### yugandhar ###
+## yugandhar ##
 for all code in parent repository and learning and adding code to it, it includes
 neural nets for classification
 
@@ -33,7 +33,7 @@ drop out using pkeep
 * convolutional
 
 
-### matplotlib ###
+## matplotlib ##
 learning matlab plot for python
 
 ![Image](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/img/93d5f08a4f82d4c.png)
