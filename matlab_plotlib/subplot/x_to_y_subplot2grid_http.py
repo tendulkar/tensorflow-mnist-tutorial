@@ -48,6 +48,7 @@ dt, openp, highp, lowp, closep, adjclose, volume = np.loadtxt(stock_info,
                                                               })
 print("dt size: {}".format(len(stock_info)))
 
+fig = plt.figure(facecolor="white")
 ax1 = plt.subplot2grid((6, 1), (0, 0), rowspan=1, colspan=1)
 plt.ylabel("H-L")
 ax2 = plt.subplot2grid((6, 1), (1, 0), rowspan=4, colspan=1, sharex=ax1)
@@ -99,3 +100,5 @@ plt.setp(ax2.get_xticklabels(), visible=False)
 for label in ax3.xaxis.get_ticklabels():
     label.set_rotation(45)
 plt.show()
+fig.savefig('stock_data', facecolor=fig.get_facecolor())
+
