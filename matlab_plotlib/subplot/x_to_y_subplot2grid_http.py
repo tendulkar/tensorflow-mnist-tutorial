@@ -72,10 +72,11 @@ ax2.xaxis.set_major_locator(mticker.MaxNLocator(10))
 # plot volumes on ax2v
 # ax2v is creating using twinx()
 # twinx is nothing but use same 'x' axis and grid layout, but uses different 'y' axis on right side
-ax2v.fill_between(dt[-start:], 0, volume[-start:], facecolor="cyan", alpha=0.4)
+ax2v.fill_between(dt[-start:], 0, volume[-start:], label="volume", facecolor="cyan", alpha=0.4)
 ax2v.yaxis.set_ticklabels([])
 ax2v.grid(False)
 ax2v.set_ylim(0, 3 * volume.max())
+ax2v.legend().get_frame().set_alpha(.2)
 
 
 # plot moving averages
@@ -85,13 +86,13 @@ ax3.fill_between(dt[-start:], ma1[-start:], ma2[-start:], where=(ma1[-start:] > 
 ax3.fill_between(dt[-start:], ma1[-start:], ma2[-start:], where=(ma1[-start:] < ma2[-start:]), facecolor="red", edgecolor="red")
 ax3.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
 ax3.xaxis.set_major_locator(mticker.MaxNLocator(10))
-ax3.legend()
+ax3.legend(loc="lower right", ncol=2).get_frame().set_alpha(0.1)
 
 # plot difference b/n highs and lows
 ax1.plot_date(dt[-start:], highp[-start:] - lowp[-start:], fmt="-", label="variation")
 ax1.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
 ax1.xaxis.set_major_locator(mticker.MaxNLocator(10))
-ax1.legend()
+ax1.legend(loc="upper right").get_frame().set_alpha(0.4)
 
 plt.setp(ax1.get_xticklabels(), visible=False)
 plt.setp(ax2.get_xticklabels(), visible=False)
