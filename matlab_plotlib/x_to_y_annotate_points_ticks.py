@@ -1,6 +1,8 @@
-import numpy as np
 import matplotlib.pyplot as plt
-import common.ticks as ticks
+import numpy as np
+
+from ai import common as ticks
+
 
 X = np.linspace(-np.pi, np.pi, num=256, endpoint=True)
 C, S = np.cos(X), np.sin(X)
