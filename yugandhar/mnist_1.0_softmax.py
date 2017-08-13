@@ -40,15 +40,16 @@ with tf.Session() as sess:
         sess.run(train_step, feed_dict=train_data)
 
         if should_update_train:
-            a, c = sess.run([accuracy, cross_entropy], feed_dict=train_data)
-            plotter.add_train_accuracy_loss(iteration, a)
-            plotter.add_train_loss(iteration, c)
+            a, c, wv, bv = sess.run([accuracy, cross_entropy, W, b], feed_dict=train_data)
+            plotter.add_train_curves(iteration, a, c)
+            plotter.add_parameters(iteration, wv, bv)
             print("I: {:5d}, Train accuracy: {}, cross entropy: {}".format(iteration, a, c))
         if should_update_test:
             test_data = {X: mnist.test.images, Y_: mnist.test.labels}
             a, c = sess.run([accuracy, cross_entropy], feed_dict=test_data)
-            plotter.add_test_accuracy(iteration, a)
-            plotter.add_test_loss(iteration, c)
+            plotter.add_test_curves(iteration, a, c)
             print("I: {:5d}, Test accuracy: {}, cross entropy: {}".format(iteration, a, c))
 
-    plotter.start(training, 1000)
+    plotter.start(training, 2000)
+
+    print("max accuracy of model: {}".format(plotter.get_max_accuracy()))
